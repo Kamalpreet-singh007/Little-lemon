@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'reastraunt',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'littlelemon.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['reastraunt/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,5 +120,6 @@ STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
+STATIC_ROOT = "reastraunt/static"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
