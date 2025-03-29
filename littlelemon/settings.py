@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'reastraunt',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -77,7 +78,7 @@ WSGI_APPLICATION = 'littlelemon.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",  # Stores database in project directory
     }
 }
 
