@@ -8,7 +8,7 @@ class Booking_table(models.Model):
     
 
     def __str__(self):
-        return self.name
+       return f'{self.title} : {str(self.price)}'
 
     # def __unicode__(self):
     #     return 

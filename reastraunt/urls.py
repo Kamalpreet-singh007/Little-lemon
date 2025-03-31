@@ -8,7 +8,7 @@ router.register(r'users', views.UserViewSet)
 
 urlpatterns = [
     # my views
-    path('menu/', views.MenuItemView.as_view()),
+    path('menu/', views.MenuItemView.as_view(), name='get_all_menu_items'),
     path('menu/<int:pk>', views.SingleItemView.as_view()),
     path('msg',views.msg),
 
