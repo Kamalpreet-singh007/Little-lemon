@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'reastraunt',
     'rest_framework',
+    'rest_framework.authtoken',
+    'djoser',
 ]
 
 MIDDLEWARE = [
@@ -52,6 +54,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'littlelemon.urls'
+
+DJOSER={"USER_ID_FIELD":"username"}
 
 TEMPLATES = [
     {
@@ -70,6 +74,17 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'littlelemon.wsgi.application'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ]
+}
+
+  
 
 
 # Database
